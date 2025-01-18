@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: Roboto;
+
+}
+
+.container {
+    min-height: 100vh;
+    background: linear-gradient(185deg, #196651, #AECDD9);
+    padding: 10px;
+}
+
+.todo-container {
+
+    max-width: 545px;
+    background-color: white;
+    margin: 100px auto;
+    border-radius: 10px;
+}
+
+.todo-container h1 {
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.todo-container h1 img {
+    width: 35px;
+    margin-left: 10px;
+}
+
+.todo-container:hover {
+    box-shadow: 1px 2px 2px 3px black;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transperant;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: blue;
+    border-radius: 10px;
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background: url('data:image/jpeg;base64,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');
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 16px;
+}
+
+ul li.check {
+    text-decoration: line-through;
+    color: #555;
+}
+
+ul li.check::before {
+    color: #666;
+    background-image: url('https://www.google.co.uk/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Ftick&psig=AOvVaw2CLAw_dG2i0W4e4cVShMtK&ust=1703508974888000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPCFts2PqIMDFQAAAAAdAAAAABAI');
+    background-size: cover;
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
